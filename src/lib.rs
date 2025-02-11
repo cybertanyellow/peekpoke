@@ -49,6 +49,11 @@ pub fn read(address: u32) -> u32 {
 pub fn read16(address: u32) -> u16 {
     unsafe { peek16(address) }
 }
+
+pub fn read8(address: u32) -> u8 {
+    unsafe { peek8(address) }
+}
+
 /// Writes the value given to the physical memory address.
 ///
 /// # Example
@@ -90,4 +95,8 @@ pub fn write(address: u32, value: u32) {
 
 pub fn write16(address: u32, value: u16) {
     unsafe { poke16(address, value) };
+}
+
+pub fn write8(address: u32, value: u8) {
+    unsafe { poke8(address, value) };
 }
